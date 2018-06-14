@@ -1,6 +1,7 @@
 <template>
   <div>
     footer
+    {{title}}
   </div>
 </template>
 
@@ -8,7 +9,7 @@
   export default{
     name: 'footers',
     props: {
-
+      title:''
 
     },
     created(){

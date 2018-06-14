@@ -2,7 +2,7 @@
   <div class="hello">
     <headers></headers>
     <div>content</div>
-    <footers></footers>
+    <footers :title="msg"></footers>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
     }
   },
   mounted(){
