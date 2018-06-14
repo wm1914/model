@@ -13,6 +13,7 @@ export default {
     Vue.component(Header.name,Header);
     //全局底部
     Vue.component(footer.name,footer);
+    // 测试
 
   }
 }
