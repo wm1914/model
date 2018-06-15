@@ -6,7 +6,7 @@ var io = require('socket.io')(http)
 var test = io.of('/test')
 test.on('connect', function (socket) {
   console.log('test socket connect')
-
+  // emit名称和页面发送的数据保持一致
   socket.emit('get_test_msg', {
     msg: 'socket测试连接成功'
   })
