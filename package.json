@@ -6,17 +6,20 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "concurrently \"npm run dev\" \"npm run socket\"",
+    "start": "concurrently \"npm run dev\" \"npm run mock\" \"npm run socket\"",
     "socket": "node-dev build/socket-server.js",
+    "mock": "node-dev build/mock-server.js",
     "build": "node build/build.js"
   },
   "dependencies": {
     "element-ui": "^2.4.1",
+    "jquery": "^3.3.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "socket.io-client": "^2.1.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -37,6 +40,7 @@
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "mockjs": "^1.0.1-beta3",
     "node-dev": "^3.1.3",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",

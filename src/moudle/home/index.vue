@@ -17,7 +17,7 @@
   import $ from 'jquery'
   import AMap from 'AMap'
   // AMapUI以后扩展可能用到
-  import AMapuUI from 'AMapUI'
+  import AMapUI from 'AMapUI'
 
   export default {
     name: 'HelloWorld',

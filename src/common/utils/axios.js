@@ -1,5 +1,20 @@
 import axios from 'axios'
-import qs from 'qs'
+import router from '../../router'
+
+axios.defaults.timeout = 5000
+axios.defaults.baseURL = Base
+
+axios.interceptors.request.use(
+  config => {
+    if (sessionStorage.getItem('token')) {
+      config.headers.Authorization = `token ${sessionStorage.getItem('token')}`
+    }
+    return config
+  },
+  error => {
+    return Promise.reject(error)
+  }
+)
 
 export function get (url,params) {
    return new Promise((resolve,reject) =>{
