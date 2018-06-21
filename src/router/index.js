@@ -1,15 +1,18 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import home from './home'
+import VueRouter from 'vue-router'
+import Common from './common'
+import permissionUtil from '../common/utils/permissionUtil'
 
+Vue.use(VueRouter)
 
-Vue.use(Router)
-
-const routers = new Router({
+const router = new VueRouter({
   mode: 'history',
-  routes: [
-    ...home
-  ]
+  routes: []
 })
 
-export default routers
+router.addRoutes(Common)
+
+// 路由权限验证
+router.beforeEach(permissionUtil.checkUrl)
+
+export default router

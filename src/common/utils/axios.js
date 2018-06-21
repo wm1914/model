@@ -2,7 +2,7 @@ import axios from 'axios'
 import router from '../../router'
 
 axios.defaults.timeout = 5000
-axios.defaults.baseURL = Base
+axios.defaults.baseURL = process.env.API_HOST
 
 axios.interceptors.request.use(
   config => {

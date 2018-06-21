@@ -1,13 +1,10 @@
 <template>
   <div class="hello">
-    <headers></headers>
-    <div>content</div>
     <div id="map-container"></div>
     <div class="img-container">
       <img class="image" ref="cameraPic" src="./img/test2.png" alt="">
       <div id="svg_draw"></div>
     </div>
-    <footers :title="msg"></footers>
   </div>
 </template>
 
@@ -70,7 +67,7 @@
           parentIndexCode: -1,
         };
         apiTest(_obj).then((res) =>{
-          console.log(res)
+          // console.log(res)
         })
           .catch(err =>{
             console.log(err)
@@ -120,7 +117,8 @@
         // 原图片的尺寸
         this.picSize.picW = _w
         this.picSize.picH = _h
-          console.log(this.picSize)
+          // console.log(this.picSize)
+        this.drawScaleTarget()
         this.drawScaleTarget()
       },
         drawScaleTarget () {

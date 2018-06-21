@@ -1,7 +1,5 @@
-// 登录成功模拟数据
 module.exports = {
   message: 'success',
-  token: 'ssssssssssssssssssssssssss',
   user: {
     account: 'admin',
     realName: 'lx',
@@ -71,10 +69,3 @@ module.exports = {
     }
   ]
 }
-
-// 登录失败模拟数据
-/*
- module.exports = {
-  message: '登录失败'
- }
- */

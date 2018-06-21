@@ -1,7 +1,6 @@
 <template>
   <div>
     footer
-    {{title}}
   </div>
 </template>
 
@@ -10,7 +9,6 @@
     name: 'footers',
     props: {
       title:''
-
     },
     created(){
 
@@ -22,7 +20,6 @@
 
     },
     data(){
-
       return {
 
       }

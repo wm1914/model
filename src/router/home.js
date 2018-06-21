@@ -1,10 +1,9 @@
+import Home from '../module/home/home'
 
-const home  = () => import('../moudle/home/index')
 export default [
-
   {
-    path: '/',
+    path: '/home',
     name: 'home',
-    component: home
+    component: Home
   }
 ]
